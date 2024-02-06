@@ -1,4 +1,5 @@
 // Import necessary modules or components here
+console.log('index.js is running');
 
 // Function to initialize the GUI
 function initGUI() {
