@@ -1,0 +1,2 @@
+# This file lists the dependencies for the project
+dataclasses; python_version < "3.7"

@@ -1,0 +1,13 @@
+{
+  "name": "ai-workflow-gui",
+  "version": "1.0.0",
+  "description": "A web-based GUI for AI agent workflow creation and management.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+}
