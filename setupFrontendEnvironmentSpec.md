@@ -1,5 +1,16 @@
 # Specification for `setupFrontendEnvironment.js` and `run.sh`
 
+This document outlines the requirements and structure for the `setupFrontendEnvironment.js` script and the `run.sh` shell script. The primary goal of these scripts is to automate the setup process for the frontend environment of a web-based GUI application, ensuring that the directory structure is correct, necessary directories are created if missing, and permissions are verified. Additionally, `run.sh` will check for Node.js installation and handle dependency installation.
+
+## Table of Contents
+
+1. [Overview](#overview)
+2. [`setupFrontendEnvironment.js`](#setupfrontendenvironmentjs)
+3. [`run.sh`](#runsh)
+4. [Directory Structure Verification and Creation](#directory-structure-verification-and-creation)
+5. [Execution Flow](#execution-flow)
+6. [Notes](#notes)
+
 ## Overview
 
 This specification outlines the requirements and structure for the `setupFrontendEnvironment.js` script and the `run.sh` shell script. The primary goal of these scripts is to automate the setup process for the frontend environment of a web-based GUI application, ensuring that the directory structure is correct, necessary directories are created if missing, and permissions are verified. Additionally, `run.sh` will check for Node.js installation and handle dependency installation.
@@ -59,6 +70,8 @@ project-root/
 If any of these directories do not exist, the script will create them and set appropriate permissions (read, write, and execute for the user; read and execute for the group and others).
 
 ## Execution Flow
+
+The following steps outline the execution flow of the `run.sh` script:
 
 1. The user executes `run.sh`.
 2. `run.sh` checks for Node.js and npm installations.

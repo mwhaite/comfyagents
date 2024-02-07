@@ -1,9 +1,15 @@
 import Node from './Node.js';
 
+// This factory class is used to create nodes of different types
+// nodes types are defined in the ../nodes directory
 export default class NodeFactory {
-  static createNode(type, id) {
-    // Example logic for creating a node based on type
-    // In a real scenario, this would dynamically import and instantiate node types
-    return new Node(id, type);
+  static async createNode(type, id) {
+    let NodeClass;
+    try {
+      NodeClass = await import(`../nodes/${type}Node.js`);
+    } catch (error) {
+      NodeClass = await import('../nodes/Node.js');
+    }
+    return new NodeClass.default(id, type);
   }
 }
